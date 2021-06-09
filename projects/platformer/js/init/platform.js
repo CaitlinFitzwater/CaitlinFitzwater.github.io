@@ -35,10 +35,14 @@
          * bottom of the game.
          */
         createPlatform(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
-
-        // example:
-        createPlatform(400, 250);
-        createPlatform(170, 460, 0.5);
+        /*I need 5 platforms.*/
+        
+        createPlatform(440, 499, 2);           // normal platform
+        createPlatform(400, 220)       // small horizontal platform (30% the normal width) holds something
+        createPlatform(200, 600, 0.4, 3)   // wall
+        createPlatform(150, 330, 0.5)      // holds something
+        createPlatform(230, 400, 1)       //The one after normal platform
+        createPlatform(400, 190, 1, 3)          //last platform
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
