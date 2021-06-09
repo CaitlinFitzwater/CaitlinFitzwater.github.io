@@ -42,7 +42,7 @@
         createPlatform(200, 600, 0.4, 3)   // wall
         createPlatform(150, 330, 0.5)      // holds something
         createPlatform(230, 400, 1)       //The one after normal platform
-        createPlatform(400, 190, 1, 3)          //last platform
+        createPlatform(650, 160, .5, 3)          //last platform, need to fix
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
