@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-image: url("https://i.pinimg.com/originals/0d/2c/3c/0d2c3cc6cec467e326d13a97c7cd650f.png");
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -18,6 +18,7 @@
 		}
 		.board{
 			height: 100vh;
+			background-image: url("https://thumbs.gfycat.com/AdmiredDigitalHarrier-size_restricted.gif")
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -42,7 +43,7 @@
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
-			
+				
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
 
@@ -63,16 +64,21 @@
 			// TODO 2 - Variable declarations 
 			 var positionX=0;
 			 var points=0;
-
-			
+			 var speed=10;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				positionX = positionX + 10;
+				positionX = positionX + speed;
 				moveBoxTo(positionX);
+				if ( positionX > 993){
+					speed *= -1;
+				}
+				if ( positionX < 0){
+					speed *= -1;
+				}
 
 			};
 
@@ -82,10 +88,15 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = 0;
+				positionX =  0;
 				points = points + 1;
 				changeBoxText(points);
-
+				if (speed >= 0){
+					speed += 3;
+				}
+				else if (speed < 0){
+					speed -= 3;
+				}
 			};
 		})();
 	</script>
