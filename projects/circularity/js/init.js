@@ -47,17 +47,23 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            
+          //it is in the loop.
                 
         // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition(circles[0]);
-            game.checkCirclePosition(circles[1]);
-            game.checkCirclePosition(circles[2]);
-            game.checkCirclePosition(circles[3]);
-            game.checkCirclePosition(circles[4]);
+            // game.checkCirclePosition(circles[0]);
+            // game.checkCirclePosition(circles[1]);
+            // game.checkCirclePosition(circles[2]);
+            // game.checkCirclePosition(circles[3]);
+            // game.checkCirclePosition(circles[4]); 
+            //It is in the loop.
 
             // TODO 9 : Iterate over the array
-           
+            for (var i = 0; i < circles.length; i++) {
+                var eachCircle = circles[i];
+                physikz.updatePosition(eachCircle)
+                game.checkCirclePosition(eachCircle)
+                
+            }
             
         }
     
@@ -69,22 +75,22 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) { //x cordinate on the side
-                circle.x = 0;
-            } 
-            if ( circle.y > canvas.width) { //y on the side
-                circle.y = 0;
-            }
-            if ( circle.x > canvas.height ) {//x on the top/bottom
-                circle.x = 0;
-            } 
-            if ( circle.y > canvas.height) {//y on the top/bottom
-                circle.y = 0;
-            }
            
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            
+            if ( circle.x >= canvas.width ) { //x cordinate on the side
+                circle.x = 0;
+            } 
+            if ( circle.y >= canvas.width) { //y on the side
+                circle.y = 0;
+            }
+            if ( circle.x >= canvas.height ) {//x on the top/bottom
+                circle.x = 0;
+            } 
+            if ( circle.y >= canvas.height) {//y on the top/bottom
+                circle.y = 0;
+            }
+           
 
 
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
