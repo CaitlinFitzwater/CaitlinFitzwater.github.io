@@ -78,18 +78,18 @@ var init = function (window) {
            
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            if ( circle.x >= canvas.width ) { //x cordinate on the side
+            if ( circle.x > canvas.width ) { //x cordinate on the side
                 circle.x = 0;
             } 
-            if ( circle.y >= canvas.width) { //y on the side
+            if ( circle.y > canvas.width) { //y on the side
                 circle.y = 0;
             }
-            if ( circle.x >= canvas.height ) {//x on the top/bottom
-                circle.x = 0;
-            } 
-            if ( circle.y >= canvas.height) {//y on the top/bottom
-                circle.y = 0;
-            }
+            // if ( circle.x > canvas.height ) {//x on the top/bottom
+            //     circle.x = 0;
+            // } 
+            // if ( circle.y > canvas.height) {//y on the top/bottom
+            //     circle.y = 0;
+            // } Was not needed but still gonna keep in here just in case.
            
 
 
