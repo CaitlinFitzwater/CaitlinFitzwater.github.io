@@ -78,16 +78,16 @@ var init = function (window) {
            
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            if ( circle.x > canvas.width ) { //x axis
+            if ( circle.x > canvas.width ) { //keeping the circles in from the left side
                 circle.x = 0;
             } 
-            // if ( circle.y > canvas.width) { //y axis
-            //     circle.y = 0;
-            // }
-            // if ( circle.x > canvas.height ) {//x on the top/bottom
-            //     circle.x = 0;
-            // } 
-            if ( circle.y > canvas.height) {//y on the top/bottom
+            if ( circle.y < 0 ) {  //keeping the circles in from the  bottom
+                circle.y = canvas.height;
+            }
+            if ( circle.x < 0 ) { // keeping the circles in from the right side
+                circle.x = canvas.width;
+            } 
+            if ( circle.y > canvas.height) {// keeping the circles in from the top
                 circle.y = 0;
             }
             // Was not needed but still gonna keep in here just in case.
